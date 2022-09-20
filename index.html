@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY TODO APP</title>
+    <style>
+        .heading {
+            height: auto;
+            background-color: #FF9;
+            margin-right: auto;
+            margin-left: auto;
+            text-align: center;
+            color: #066;
+        }
+
+        button {
+            padding: 8px;
+            font-weight: 600;
+        }
+
+        .container_div {
+            display: flex;
+        }
+
+        .container {
+            width: 50%;
+            border-right: 1px solid;
+            margin-right: 10px;
+            flex: 1;
+        }
+
+        .button_div {
+            text-indent: 162px;
+            position: relative;
+            top: 50px;
+        }
+
+        form label {
+            vertical-align: top;
+            font-weight: 600;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid;
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        .strikethrough {
+            text-decoration: line-through;
+            text-decoration-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heading">
+
+        <h1>MY TODO APP</h1>
+    </div>
+    <div class="container_div">
+        <div class="container">
+            <form action="/" method="get" id="form_submit">
+                <label for="task">Todo Task : </label>
+                <textarea name="task_name" id="task" cols="50" rows="5" required></textarea>
+                <div class="button_div">
+                    <button type="submit">Add Task</button>
+                    <button type="button" onClick=resetTodo()>Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <h3>MY TODO LIST</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>CHECK</th>
+                        <th>MY TASK</th>
+                        <th>ACTION</th>
+                    </tr>
+
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
